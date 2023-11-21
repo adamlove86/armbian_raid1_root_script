@@ -2,9 +2,9 @@
 # Armbian RAID Setup for Raspberry Pi 4
 
 Set up a RAID1 root for armbian on your two external drives.
--partitions 1: RPICFG boot identically copied to 1st partitions (256MB) on the SSDs. They're non raid as raspi doesn't recognise raid boot.
--partitions 2: armbian_root as 32gb RAID1, md0, btrfs.
--partitions 3: Remainder of the disk as a btrfs md1 RAID1 storage. I did it this way so I can wipe and reinstall md0 without having to restore all my other data.
+- partitions 1: RPICFG boot identically copied to 1st partitions (256MB) on the SSDs. They're non raid as raspi doesn't recognise raid boot.
+- partitions 2: armbian_root as 32gb RAID1, md0, btrfs.
+- partitions 3: Remainder of the disk as a btrfs md1 RAID1 storage. I did it this way so I can wipe and reinstall md0 without having to restore all my other data.
 
 You need armbian running from an sd card, working as a 'live cd' of sorts. You run the script from there.
 
